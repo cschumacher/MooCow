@@ -20,17 +20,24 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $scope.modal.show();
   };
+})
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
+.controller('LoginCtrl', function($scope, $http) {
+	$scope.submit = function(){
+		var loginData = $scope.loginData,
+		data = 'username=' + loginData.username + '&password=' + loginData.password;
+		$http({
+			url: "https://auth.isqft.com/Authentication/AccessToken?grantType=password&", 
+	        method: "POST",
+	        data: data, 
+	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		}).success(function (data, status, headers, config) {
+			//alert('success');
+			$scope.closeLogin();
+		}).error(function (data, status, headers, config) {
+			alert('error' + data + status);
+		});
+	}
 })
 
 .controller('PlaylistsCtrl', function($scope) {
