@@ -1,4 +1,7 @@
 /* Empty. Add your own CSS if you like */
-ion-item {
-	background-color: red;
+
+.alert {
+	background-color:#F2DEDE;
+	color:#AF4442;
+	vertical-align: middle;
 }
