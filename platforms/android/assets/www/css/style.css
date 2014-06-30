@@ -2,3 +2,9 @@
 ion-item {
 	background-color: red;
 }
+
+.loadingDiv {
+	width: 10px;
+	margin: 0px auto;
+	display: none;
+}

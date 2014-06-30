@@ -22,10 +22,12 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('LoginCtrl', function($scope, $http) {
+.controller('LoginCtrl', function($scope, $http, $rootScope) {
 	$scope.submit = function(){
-		var loginData = $scope.loginData,
-		data = 'username=' + loginData.username + '&password=' + loginData.password;
+		//var loginData = $scope.loginData,
+		//data = 'username=' + loginData.username + '&password=' + loginData.password;
+		
+		var data = 'username=johngrakowski%40gmail.com&password=123456';
 		$http({
 			url: "https://auth.isqft.com/Authentication/AccessToken?grantType=password&", 
 	        method: "POST",
@@ -33,6 +35,7 @@ angular.module('starter.controllers', [])
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		}).success(function (data, status, headers, config) {
 			//alert('success');
+			$rootScope.authToken = data['access_token'];
 			$scope.closeLogin();
 		}).error(function (data, status, headers, config) {
 			alert('error' + data + status);
