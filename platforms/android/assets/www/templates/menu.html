@@ -8,27 +8,27 @@
   </ion-pane>
 	
 	<style>
-		.ion-item {
+		.list.item {
 			background-color: red;
 		}
 	</style>
 
   <ion-side-menu side="left" style="background-color:gray;">
     <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">iSqFt</h1>
     </header>
     <ion-content class="has-header">
       <ion-list>
-        <ion-item nav-clear menu-close ng-click="login()">
+        <ion-item nav-clear menu-close ng-click="login()" class="backgreen">
           Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
+        <ion-item nav-clear menu-close href="#/app/search" class="backgreen">
           Search
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
+        <ion-item nav-clear menu-close href="#/app/browse" class="backgreen">
           Browse
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
+        <ion-item nav-clear menu-close href="#/app/playlists" class="backgreen">
           Playlists
         </ion-item>
         <ion-item nav-clear menu-close ng-controller="contactCtrl" ng-click="getContacts()">

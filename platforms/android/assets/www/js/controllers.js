@@ -38,6 +38,13 @@ angular.module('starter.controllers', [])
 			$rootScope.authToken = data['access_token'];
 			$scope.closeLogin();
 		}).error(function (data, status, headers, config) {
+			$scope.myError = true;
+			$scope.alerts = [{ type: 'Error: ', msg: 'Check your credentials and try again!' }];
+			
+			$scope.closeAlert = function(index) {
+			  $scope.alerts.splice(index, 1);
+			};
+			  
 			alert('error' + data + status);
 		});
 	}

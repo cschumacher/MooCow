@@ -1,4 +1,5 @@
 /* Empty. Add your own CSS if you like */
+<<<<<<< HEAD
 ion-item {
 	background-color: red;
 }
@@ -7,4 +8,11 @@ ion-item {
 	width: 10px;
 	margin: 0px auto;
 	display: none;
+=======
+
+.alert {
+	background-color:#F2DEDE;
+	color:#AF4442;
+	vertical-align: middle;
+>>>>>>> d7a0ecc5d8673ddd5b4545ea73a790258ea212d0
 }
