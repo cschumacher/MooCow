@@ -1,18 +1,36 @@
 /* Empty. Add your own CSS if you like */
-<<<<<<< HEAD
-ion-item {
-	background-color: red;
-}
-
 .loadingDiv {
 	width: 10px;
 	margin: 0px auto;
 	display: none;
-=======
+}
 
 .alert {
-	background-color:#F2DEDE;
-	color:#AF4442;
-	vertical-align: middle;
->>>>>>> d7a0ecc5d8673ddd5b4545ea73a790258ea212d0
+	background-color: #F2DEDE;
+	color: #AF4442;
+	text-align: center;
+}
+
+
+
+.sample-show-hide.ng-hide-add, .sample-show-hide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+.sample-show-hide.ng-hide-add.ng-hide-add-active,
+.sample-show-hide.ng-hide-remove {
+  opacity:0;
+}
+
+.sample-show-hide.ng-hide-add,
+.sample-show-hide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+
+button.login {
+	width: 75%
 }

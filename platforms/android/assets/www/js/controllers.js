@@ -24,28 +24,28 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope, $http, $rootScope) {
 	$scope.submit = function(){
-		//var loginData = $scope.loginData,
-		//data = 'username=' + loginData.username + '&password=' + loginData.password;
+//		if (!loginForm.email.$valid)
+//			return;
 		
-		var data = 'username=johngrakowski%40gmail.com&password=123456';
+		var loginData = $scope.loginData,
+		data = 'username=' + loginData.username + '&password=' + loginData.password;
+		
+		//var data = 'username=johngrakowski%40gmail.com&password=123456';
 		$http({
 			url: "https://auth.isqft.com/Authentication/AccessToken?grantType=password&", 
 	        method: "POST",
 	        data: data, 
 	        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		}).success(function (data, status, headers, config) {
-			//alert('success');
+			alert('success');
 			$rootScope.authToken = data['access_token'];
 			$scope.closeLogin();
 		}).error(function (data, status, headers, config) {
-			$scope.myError = true;
 			$scope.alerts = [{ type: 'Error: ', msg: 'Check your credentials and try again!' }];
-			
 			$scope.closeAlert = function(index) {
 			  $scope.alerts.splice(index, 1);
 			};
-			  
-			alert('error' + data + status);
+			//alert('error' + data + status);
 		});
 	}
 })
