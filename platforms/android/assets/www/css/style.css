@@ -1,18 +1,29 @@
 /* Empty. Add your own CSS if you like */
-<<<<<<< HEAD
 ion-item {
 	background-color: red;
 }
 
-.loadingDiv {
-	width: 10px;
-	margin: 0px auto;
-	display: none;
-=======
+.mCenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    background-color: red;
+    margin: auto;
+}
+
+div.centery {
+    box-sizing: border-box;
+    position: fixed;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
 
 .alert {
-	background-color:#F2DEDE;
-	color:#AF4442;
+	background-color: #F2DEDE;
+	color: #AF4442;
 	vertical-align: middle;
->>>>>>> d7a0ecc5d8673ddd5b4545ea73a790258ea212d0
 }
