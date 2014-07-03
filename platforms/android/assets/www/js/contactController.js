@@ -10,7 +10,7 @@ angular.module('starter.controllers')
 
 			$scope.getContacts = function() {
 				var authToken = $rootScope.authToken;
-				var limit = 2;
+				var limit = 5;
 				var offset = 1;
 				var filter = 'ContactLastUpdatedDate%3E5%2F1%2F2013';
 
@@ -18,7 +18,7 @@ angular.module('starter.controllers')
 						+ limit + '&offset=' + offset + '&filter=' + filter
 						+ '&oauth_token=' + authToken;
 
-				var loadingDiv = document.getElementById('loading');
+				var loadingDiv = document.getElementById('loadingDiv');
 				loadingDiv.style.display = 'block';
 				
 				$http({
