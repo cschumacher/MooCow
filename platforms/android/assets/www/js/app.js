@@ -65,6 +65,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'PlaylistCtrl'
         }
       }
+    })
+    
+    .state('app.contacts', {
+    	url: "/contacts",
+    	views: {
+    		'menuContent':{
+    			templateUrl: "templates/contacts.html",
+    			controller: 'contactsCtrl'
+    		}
+    	}
+    })
+    
+    .state('app.contact', {
+    	url: "/contacts/:companyid",	// Is this id being passed needed?
+    	views: {
+    		'menuContent':{
+    			templateUrl: "templates/contact.html",
+    			controller: 'contactCtrl'
+    		}
+    	}
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');

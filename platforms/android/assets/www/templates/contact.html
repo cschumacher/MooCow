@@ -1,7 +1,6 @@
-<ion-view title="Contacts">
-    <ion-list>
-      <ion-item ng-repeat="contact in contacts" href="">
-        {{contact.companyname}}
-      </ion-item>
-    </ion-list>
+<ion-view title="Contact">
+  <ion-content class="has-header">
+    <h1>{{contact.companyname}}</h1>
+    <h4>{{contact.address.address1}} {{contact.address.city}}, {{contact.address.state}}</h4>
+  </ion-content>
 </ion-view>
