@@ -1,8 +1,4 @@
 /* Empty. Add your own CSS if you like */
-ion-item {
-	background-color: red;
-}
-
 .mCenter {
     position: fixed;
     top: 50%;
@@ -21,9 +17,39 @@ div.centery {
     text-align: center;
     align-content: center;
 }
+.loadingDiv {
+	width: 10px;
+	margin: 0px auto;
+	display: none;
+}
 
 .alert {
 	background-color: #F2DEDE;
 	color: #AF4442;
 	vertical-align: middle;
+	text-align: center;
+}
+
+
+
+.animate-show-hide.ng-hide-add, .animate-show-hide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+.animate-show-hide.ng-hide-add.ng-hide-add-active,
+.animate-show-hide.ng-hide-remove {
+  opacity:0;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+
+button.login {
+	width: 75%
 }
