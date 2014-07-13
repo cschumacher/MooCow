@@ -30,7 +30,9 @@ angular.module('starter.controllers', [])
 		var loginData = $scope.loginData,
 		data = 'username=' + loginData.username + '&password=' + loginData.password;
 		
+		// TODO Set isDebug to use this for when debugging
 		//var data = 'username=johngrakowski%40gmail.com&password=123456';
+		
 		$http({
 			url: "https://auth.isqft.com/Authentication/AccessToken?grantType=password&", 
 	        method: "POST",

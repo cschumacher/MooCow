@@ -17,7 +17,8 @@ div.centery {
     text-align: center;
     align-content: center;
 }
-.loadingDiv {
+
+#loadingDiv {
 	width: 10px;
 	margin: 0px auto;
 	display: none;
